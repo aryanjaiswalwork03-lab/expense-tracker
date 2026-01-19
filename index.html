@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>💰 Expense Tracker</h1>
+            <p class="tagline">Manage your finances with ease</p>
+        </header>
+
+
+        <section class="input-section">
+            <div class="form-group">
+                <input type="text" id="desc" placeholder="Description" class="input-field">
+                <input type="number" id="amount" placeholder="Amount (₹)" class="input-field" step="0.01" min="0">
+                <input type="date" id="date" class="input-field">
+                <select id="type" class="input-field select-field">
+                    <option value="income">📈 Income</option>
+                    <option value="expense">📉 Expense</option>
+                </select>
+                <button onclick="addTransaction()" class="btn-add">Add Transaction</button>
+            </div>
+        </section>
+
+
+        <section class="summary-section">
+            <div class="summary-card income-card">
+                <h3>📊 Total Income</h3>
+                <p class="amount" id="income">₹0</p>
+            </div>
+            <div class="summary-card expense-card">
+                <h3>💸 Total Expenses</h3>
+                <p class="amount" id="expense">₹0</p>
+            </div>
+            <div class="summary-card balance-card">
+                <h3>💳 Balance</h3>
+                <p class="amount" id="balance">₹0</p>
+            </div>
+        </section>
+
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <h2>Overview</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Monthly Breakdown</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+
+
+        <section class="transactions-section">
+            <div class="section-header">
+                <h2>Transactions</h2>
+                <select id="monthFilter" onchange="filterByMonth()" class="month-select">
+                    <option value="">All Months</option>
+                </select>
+            </div>
+            <div class="transaction-list" id="transactionList">
+                <p class="no-transactions">No transactions yet. Add one to get started!</p>
+            </div>
+        </section>
+
+
+        <section class="footer-section">
+            <button onclick="clearAllData()" class="btn-clear">Clear All Data</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
