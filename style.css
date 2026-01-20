@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
-
+/* container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,13 +27,13 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
-
+/* App title */
 .header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+/* Subtitle  */
 .tagline {
   font-size: 1.1em;
   opacity: 0.95;
@@ -45,14 +45,14 @@ body {
   padding: 30px;
   border-bottom: 2px solid #e9ecef;
 }
-
+/* Responsive grid */
 .form-group {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   align-items: end;
 }
-
+/* input and selection field */
 .input-field,
 .select-field {
   padding: 12px 15px;
@@ -62,7 +62,7 @@ body {
   transition: all 0.3s ease;
   font-family: inherit;
 }
-
+/* Focus effect for better UX */
 .input-field:focus,
 .select-field:focus {
   outline: none;
@@ -70,7 +70,7 @@ body {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   transform: translateY(-2px);
 }
-
+/* Add transaction button */
 .btn-add {
   padding: 12px 30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -84,7 +84,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
+/* Button hover animation */
 .btn-add:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
@@ -102,7 +102,7 @@ body {
   padding: 30px;
   background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
-
+/*  summary card */
 .summary-card {
   padding: 25px;
   border-radius: 12px;
@@ -112,7 +112,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+/* Top decorative line */
 .summary-card::before {
   content: '';
   position: absolute;
@@ -122,22 +122,22 @@ body {
   height: 4px;
   background: linear-gradient(90deg, inherit, transparent);
 }
-
+/* Hover effect */
 .summary-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
-
+/* Income card */
 .income-card {
   background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
   color: white;
 }
-
+/* Expense card */
 .expense-card {
   background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
   color: white;
 }
-
+/* Balance card */
 .balance-card {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -163,7 +163,7 @@ body {
   padding: 30px;
   background: #ffffff;
 }
-
+/* Chart card container */
 .chart-container {
   background: #f8f9fa;
   padding: 25px;
@@ -182,7 +182,7 @@ body {
   padding: 30px;
   background: #f8f9fa;
 }
-
+/* Header with title & month filter */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -195,7 +195,7 @@ body {
 .section-header h2 {
   color: #333;
 }
-
+/* Month dropdown */
 .month-select {
   padding: 10px 15px;
   border: 2px solid #ddd;
@@ -211,12 +211,12 @@ body {
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
-
+/* Transaction list layout */
 .transaction-list {
   display: grid;
   gap: 10px;
 }
-
+/* Individual transaction item */
 .transaction-item {
   display: flex;
   justify-content: space-between;
@@ -228,16 +228,16 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
+/* Hover animation */
 .transaction-item:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transform: translateX(5px);
 }
-
+/* Income transaction */
 .transaction-item.income {
   border-left-color: #38ef7d;
 }
-
+/* Expense transaction */
 .transaction-item.expense {
   border-left-color: #f45c43;
 }
@@ -257,7 +257,7 @@ body {
   font-size: 0.85em;
   color: #999;
 }
-
+/* Amount styling */
 .transaction-amount {
   font-weight: 700;
   font-size: 1.1em;
@@ -273,6 +273,7 @@ body {
 .transaction-item.expense .transaction-amount {
   color: #f45c43;
 }
+
 
 .btn-delete {
   padding: 8px 15px;
@@ -304,7 +305,7 @@ body {
   text-align: center;
   border-top: 2px solid #e9ecef;
 }
-
+/* Clear all button */
 .btn-clear {
   padding: 12px 30px;
   background: #ff6b6b;
